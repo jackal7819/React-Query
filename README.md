@@ -16,7 +16,7 @@ This project serves as a demonstration of React Query, a powerful library for ma
 
 ## Project Link
 
-Explore the project here: [Project Link](https://example.com)
+Explore the project here: [Project Link](https://github.com/jackal7819/React-Query)
 
 ## Enjoy React Query!
 
