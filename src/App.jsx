@@ -16,7 +16,7 @@ const App = () => {
 
 	return (
 		<section className='section-center'>
-			<ToastContainer position='top-center' />
+			<ToastContainer position='top-left' />
 			<Form />
 			<Items items={items} />
 		</section>
