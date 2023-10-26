@@ -1,10 +1,23 @@
+import { useDeleteTask, useEditTask } from './tanstackCustomHooks';
+
 const SingleItem = ({ item }) => {
+	const editTask = useEditTask();
+	const { isLoading, deleteTask } = useDeleteTask();
+
+	const handleEditTask = () => {
+		editTask({ taskId: item.id, isDone: !item.isDone });
+	};
+
+	const handleDeleteTask = () => {
+		deleteTask(item.id);
+	};
+
 	return (
 		<div className='single-item'>
 			<input
 				type='checkbox'
 				checked={item.isDone}
-				onChange={() => console.log('edit task')}
+				onChange={handleEditTask}
 			/>
 			<p
 				style={{
@@ -16,7 +29,8 @@ const SingleItem = ({ item }) => {
 			<button
 				className='btn remove-btn'
 				type='button'
-				onClick={() => console.log('delete task')}>
+				onClick={handleDeleteTask}
+				disabled={isLoading}>
 				delete
 			</button>
 		</div>
