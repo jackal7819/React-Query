@@ -2,7 +2,7 @@ import SingleItem from './SingleItem';
 import { useFetchTasks } from './tanstackCustomHooks';
 
 const Items = () => {
-	const { isLoading, isError, data } = useFetchTasks();
+	const { isLoading, isError, data, error } = useFetchTasks();
 
 	if (isLoading) {
 		return <div className='loading'></div>;
